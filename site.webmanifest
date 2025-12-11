@@ -1,8 +1,8 @@
 {
   "name": "MK Tiling",
   "short_name": "MK Tiling",
-  "description": "Mathematical Tilings by MK",
-  "start_url": "/about",
+  "description": "MK's personal site focused on mathematical tilings",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "white",
