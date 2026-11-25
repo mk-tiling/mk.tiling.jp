@@ -17,18 +17,19 @@
       return;
     }
 
+    let preference;
     try {
-      let preference = localStorage.getItem(key);
-      if (preference !== "ja" && preference !== "en") {
-        preference = /^ja(?:-|$)/i.test(navigator.language) ? "ja" : "en";
-        localStorage.setItem(key, preference);
-      }
-      if (current === "en" && preference === "ja") {
-        url.pathname = japanesePath;
-        location.replace(url.href);
-      }
+      preference = localStorage.getItem(key);
     } catch {
-      // The current URL remains usable without storage.
+      // Fall back to the browser language when storage is unavailable.
+    }
+    if (preference !== "ja" && preference !== "en") {
+      preference = /^ja(?:-|$)/i.test(navigator.language) ? "ja" : "en";
+    }
+    // Automatic redirects only go from English to Japanese, never back.
+    if (current === "en" && preference === "ja") {
+      url.pathname = japanesePath;
+      location.replace(url.href);
     }
   })();
 })();</script><link rel="alternate" hreflang="en" href="https://mk.tiling.jp/"><link rel="alternate" hreflang="ja" href="https://mk.tiling.jp/ja/"><meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:locale:alternate" content="en_US"><meta property="og:url" content="https://mk.tiling.jp/ja/"><meta property="og:title" content="MK Tiling — 数学的タイリングの研究・アートプロジェクト"><meta property="og:description" content="MK Tilingは、論文、デジタルアート、インタラクティブ作品、物理的実体を通して数学的タイリングを探究する、MKの研究・アートプロジェクトです。"><meta property="og:image" content="https://mk.tiling.jp/og-image.png?v1"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="MK Tiling — 数学的タイリングの研究・アートプロジェクト"><meta name="twitter:description" content="MK Tilingは、論文、デジタルアート、インタラクティブ作品、物理的実体を通して数学的タイリングを探究する、MKの研究・アートプロジェクトです。"><meta name="twitter:image" content="https://mk.tiling.jp/og-image.png?v1"><link rel="icon" href="/assets/icons/32.png"><link rel="apple-touch-icon" href="/assets/icons/180.png"><link rel="manifest" href="/site.webmanifest"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&family=Nunito+Sans:opsz,wght@6..12,700&family=Overpass:wght@400&display=swap" rel="stylesheet"><script data-goatcounter="https://mk-tiling.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><script>
