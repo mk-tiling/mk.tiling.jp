@@ -50,6 +50,17 @@
 
     document.addEventListener("click", setGoatcounterReferrer, true);
     document.addEventListener("auxclick", setGoatcounterReferrer, true);
+
+    const preserveLanguageHash = (event) => {
+      if (!(event.target instanceof Element)) return;
+      const link = event.target.closest("a[data-language-switch]");
+      if (!(link instanceof HTMLAnchorElement)) return;
+      link.hash = window.location.hash;
+    };
+
+    document.addEventListener("click", preserveLanguageHash, true);
+    document.addEventListener("auxclick", preserveLanguageHash, true);
+    document.addEventListener("contextmenu", preserveLanguageHash, true);
   })();
 </script><script>window.MathJax = {
             tex: {
@@ -57,20 +68,20 @@
               displayMath: [['$$', '$$']],
               processEscapes: true,
             },
-          };</script><link rel="stylesheet" href="/_astro/index.CyUkU3tV.css"></head> <body class="min-h-dvh font-sans text-neutral-900 "> <div class="min-h-dvh lg:grid lg:grid-cols-[15rem_minmax(0,1fr)]"> <aside class="hidden h-dvh overflow-y-auto bg-stone-100 px-7 py-8 lg:sticky lg:top-0 lg:flex lg:flex-col"><a href="/ja/" class="font-nunito text-2xl font-bold text-neutral-950 no-underline">
+          };</script><link rel="stylesheet" href="/_astro/index.DtENmNk7.css"></head> <body class="min-h-dvh font-sans text-neutral-900 "> <div class="min-h-dvh lg:grid lg:grid-cols-[15rem_minmax(0,1fr)]"> <aside class="hidden h-dvh overflow-y-auto bg-stone-100 px-4 py-8 lg:sticky lg:top-0 lg:flex lg:flex-col"><a href="/ja/" class="px-2 font-nunito text-2xl font-bold text-neutral-950 no-underline">
 MK.TILING.JP
-</a><p class="mt-3 text-xs leading-5 text-stone-600">MKによる数学的タイリングの研究・アートプロジェクト。</p><nav aria-label="メインメニュー" class="-mx-2.5 my-9"> <ul> <li> <a href="/ja/#work" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-10 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> 作品と研究 </a>  </li><li> <a href="/ja/#activity" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-10 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> 活動 </a>  </li><li> <a href="/playground/" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-10 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> Playground </a>  </li><li> <a href="/ja/about/" aria-current="page" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-10 bg-gray-200 font-semibold text-neutral-950"> MKについて </a>  </li><li> <a href="/shop/" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-10 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> ショップ </a>  </li><li> <a href="/contact/" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-10 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> お問い合わせ </a>  </li> </ul> </nav><div class="mt-auto flex flex-col gap-2.5 text-xs text-stone-600"><a href="https://www.instagram.com/mk.tiling.jp/" target="_blank" rel="noopener noreferrer" class="text-inherit no-underline hover:text-neutral-950">
+</a><p class="mt-3 px-2 text-xs leading-5 text-stone-600">MKによる数学的タイリングの研究・アートプロジェクト。</p><nav aria-label="メインメニュー" class="my-9"> <ul> <li> <a href="/ja/about/" aria-current="page" class="flex items-center rounded px-2 text-sm leading-5 min-h-10 bg-gray-200 font-semibold text-neutral-950"> MKについて </a>  </li><li> <a href="/ja/#work" class="flex items-center rounded px-2 text-sm leading-5 min-h-10 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> 作品と研究 </a>  </li><li> <a href="/ja/#activity" class="flex items-center rounded px-2 text-sm leading-5 min-h-10 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> 活動 </a>  </li><li> <a href="/playground/" class="flex items-center rounded px-2 text-sm leading-5 min-h-10 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> Playground </a>  </li><li> <a href="/shop/" class="flex items-center rounded px-2 text-sm leading-5 min-h-10 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> ショップ </a>  </li><li> <a href="/contact/" class="flex items-center rounded px-2 text-sm leading-5 min-h-10 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> お問い合わせ </a>  </li> </ul> </nav><div class="mt-auto flex flex-col gap-2.5 px-2 text-xs text-stone-600"><a href="https://www.instagram.com/mk.tiling.jp/" target="_blank" rel="noopener noreferrer" class="text-inherit no-underline hover:text-neutral-950">
 Instagram
 </a><a href="https://note.com/tairu_mk" target="_blank" rel="noopener noreferrer" class="text-inherit no-underline hover:text-neutral-950">
 note
-</a><a href="https://ko-fi.com/mk_tiling" target="_blank" rel="noopener noreferrer" class="text-inherit no-underline hover:text-neutral-950">Ko-fiで支援する</a></div></aside> <div class="flex min-h-dvh min-w-0 flex-col"> <header class="sticky top-0 z-30 bg-white lg:hidden"><div class="grid h-14 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center border-b border-stone-200 px-5 sm:px-8"><a href="/ja/" class="col-start-2 justify-self-center whitespace-nowrap font-nunito text-xl font-bold text-neutral-950 no-underline lg:text-2xl">
+</a><a href="https://ko-fi.com/mk_tiling" target="_blank" rel="noopener noreferrer" class="text-inherit no-underline hover:text-neutral-950">Ko-fiで支援する</a></div></aside> <div class="flex min-h-dvh min-w-0 flex-col"> <header class="sticky top-0 z-30 bg-white lg:hidden"><div class="grid h-14 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center border-b border-stone-200 px-4"><a href="/ja/" class="col-start-2 justify-self-center whitespace-nowrap font-nunito text-xl font-bold text-neutral-950 no-underline lg:text-2xl">
 MK.TILING.JP
-</a><details class="group"><summary class="grid size-11 cursor-pointer list-none place-items-center rounded text-neutral-900 hover:bg-stone-100 focus-visible:outline focus-visible:outline-2 [&::-webkit-details-marker]:hidden"><span class="sr-only group-open:hidden">メニューを開く</span><span class="sr-only hidden group-open:inline">メニューを閉じる</span><svg aria-hidden="true" class="size-6 group-open:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><svg aria-hidden="true" class="hidden size-6 group-open:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"></path></svg></summary><div class="absolute inset-x-0 top-full max-h-[calc(100dvh-3.5rem)] overflow-y-auto bg-white px-5 py-2 shadow-sm sm:px-8"><nav aria-label="メインメニュー" class="-mx-2.5"> <ul class="grid grid-cols-2 gap-x-4"> <li> <a href="/ja/#work" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-11 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> 作品と研究 </a>  </li><li> <a href="/ja/#activity" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-11 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> 活動 </a>  </li><li> <a href="/playground/" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-11 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> Playground </a>  </li><li> <a href="/ja/about/" aria-current="page" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-11 bg-gray-200 font-semibold text-neutral-950"> MKについて </a>  </li><li> <a href="/shop/" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-11 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> ショップ </a>  </li><li> <a href="/contact/" class="flex items-center rounded px-2.5 text-sm leading-5 min-h-11 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> お問い合わせ </a>  </li> </ul> </nav></div></details></div></header> <main class="prose prose-neutral prose-custom prose-a:no-underline relative mx-auto w-full max-w-3xl flex-1 px-5 py-10 prose-h1:text-3xl prose-h1:leading-tight prose-h1:tracking-tight sm:px-8 sm:py-14 sm:prose-h1:text-4xl lg:py-16"> <nav aria-label="言語" class="inline-flex items-center gap-1 whitespace-nowrap text-xs text-stone-700 not-prose absolute right-5 top-10 sm:right-8 sm:top-14 lg:top-16"><span lang="ja" aria-current="true" class="font-semibold">JA</span><span aria-hidden="true">/</span><a href="/about/?lang=en" lang="en" hreflang="en" aria-label="EN (English)" class="inline-flex min-h-8 items-center underline decoration-stone-400 underline-offset-4 hover:decoration-current">EN</a></nav> <h1 class="!mb-1">MK</h1>
-<p class="!mt-0 text-stone-600">数学者 / アーティスト</p>
+</a><details class="group"><summary class="grid size-11 cursor-pointer list-none place-items-center rounded text-neutral-900 hover:bg-stone-100 focus-visible:outline focus-visible:outline-2 [&::-webkit-details-marker]:hidden"><span class="sr-only group-open:hidden">メニューを開く</span><span class="sr-only hidden group-open:inline">メニューを閉じる</span><svg aria-hidden="true" class="size-6 group-open:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><svg aria-hidden="true" class="hidden size-6 group-open:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"></path></svg></summary><div class="absolute inset-x-0 top-full max-h-[calc(100dvh-3.5rem)] overflow-y-auto bg-white px-4 py-2 shadow-sm"><nav aria-label="メインメニュー"> <ul class="grid grid-cols-2 gap-x-4"> <li> <a href="/ja/about/" aria-current="page" class="flex items-center rounded px-2 text-sm leading-5 min-h-11 bg-gray-200 font-semibold text-neutral-950"> MKについて </a>  </li><li> <a href="/ja/#work" class="flex items-center rounded px-2 text-sm leading-5 min-h-11 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> 作品と研究 </a>  </li><li> <a href="/ja/#activity" class="flex items-center rounded px-2 text-sm leading-5 min-h-11 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> 活動 </a>  </li><li> <a href="/playground/" class="flex items-center rounded px-2 text-sm leading-5 min-h-11 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> Playground </a>  </li><li> <a href="/shop/" class="flex items-center rounded px-2 text-sm leading-5 min-h-11 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> ショップ </a>  </li><li> <a href="/contact/" class="flex items-center rounded px-2 text-sm leading-5 min-h-11 text-stone-700 hover:bg-gray-200/60 hover:text-neutral-950"> お問い合わせ </a>  </li> </ul> </nav></div></details></div></header> <main class="prose prose-neutral prose-custom prose-a:no-underline relative mx-auto w-full max-w-3xl flex-1 px-5 py-10 prose-h1:text-3xl prose-h1:leading-tight prose-h1:tracking-tight sm:px-8 sm:py-14 sm:prose-h1:text-4xl lg:py-16"> <nav aria-label="言語" class="inline-flex items-center gap-1 whitespace-nowrap text-xs text-stone-700 not-prose absolute right-5 top-10 sm:right-8 sm:top-14 lg:top-16"><span lang="ja" aria-current="true" class="font-semibold">JA</span><span aria-hidden="true">/</span><a href="/about/?lang=en" lang="en" hreflang="en" data-language-switch="true" aria-label="EN (English)" class="inline-flex min-h-8 items-center underline decoration-stone-400 underline-offset-4 hover:decoration-current">EN</a></nav> <h1 class="!mb-1">MK</h1>
+<p class="!mt-0 text-sm leading-6 text-stone-600">数学者 / アーティスト</p>
 <p>MKは独立研究者・アーティストです。<strong>MK Tiling</strong>は、数学的タイリングの研究から生まれたプロジェクトで、研究と制作を通してその探究を続けています。</p>
-<h2 id="制作と研究">制作と研究</h2>
+<h2 id="practice">制作と研究</h2>
 <p>MKは、論文、デジタルアート、インタラクティブ作品、物理的実体を通して、タイリングを中心に、数学的な構造、および数学的な構造を人びとがどのように受容できるかを探究しています。</p>
-<h2 id="現在の研究">現在の研究</h2>
+<h2 id="current-research">現在の研究</h2>
 <h3 id="modulo-krinkle">Modulo Krinkle</h3>
 <p>Modulo Krinkleは、初等的な道具によって生成できる周期的でないタイリングの族です。最初のプレプリントは2025年にarXivで公開しました。その後の成果をまとめた論文『Spiral Tilings Derived from Modular Arithmetic』を、アイルランドで開催されたBridges 2026で発表しました。</p>
 <ul>
@@ -82,19 +93,19 @@ MK.TILING.JP
 <ul>
 <li><a href="/research/seabed/">Seabedの詳細（英語）</a></li>
 </ul>
-<h2 id="論文発表">論文・発表</h2>
+<h2 id="publications-and-talks">論文・発表</h2>
 <ul>
 <li>Miki Imura, <a href="https://archive.bridgesmathart.org/2026/bridges2026-77.html" rel="noopener noreferrer" target="_blank" data-goatcounter-click="ext-archive-bridgesmathart-org-2026-bridges2026-77" data-goatcounter-title="archive.bridgesmathart.org/2026/bridges2026-77.html">“Spiral Tilings Derived from Modular Arithmetic”</a>, <em>Proceedings of Bridges 2026: Mathematics and the Arts</em>, pp. 77–84 (2026). <a href="/talks/bridges-2026/">発表スライド</a></li>
 <li>Miki Imura, <a href="https://arxiv.org/abs/2603.15549" rel="noopener noreferrer" target="_blank" data-goatcounter-click="ext-arxiv-org-abs-2603-15549" data-goatcounter-title="arxiv.org/abs/2603.15549">“A Recognizable Substitution for the Anti-Penrose Tiling”</a>, arXiv:2603.15549 (2026)</li>
 <li>Miki Imura, <a href="https://arxiv.org/abs/2506.07638" rel="noopener noreferrer" target="_blank" data-goatcounter-click="ext-arxiv-org-abs-2506-07638" data-goatcounter-title="arxiv.org/abs/2506.07638">“A Family of Non-Periodic Tilings, Describable Using Elementary Tools and Exhibiting a New Kind of Structural Regularity”</a>, arXiv:2506.07638 (2025)</li>
 </ul>
-<h2 id="執筆メディア掲載">執筆・メディア掲載</h2>
+<h2 id="writing-and-press">執筆・メディア掲載</h2>
 <ul>
 <li><a class="text-inherit no-underline transition-opacity duration-150 ease-out hover:opacity-70" href="https://techbookfest.org/product/3PWpgCHEPtuwRuGrs3JL6p" target="_blank" rel="noopener noreferrer" data-goatcounter-click="ext-techbookfest-spiral-tilings" data-goatcounter-title="螺旋タイリング　成立史から現代的再解釈へ">『螺旋タイリング　成立史から現代的再解釈へ』<span class="text-neutral-500">技術書典21 (2026)</span></a></li>
 <li><a class="text-inherit no-underline transition-opacity duration-150 ease-out hover:opacity-70" href="https://note.com/tairu_mk/n/nbf238ec63c96">「普通の会社員が新しい図形を発見したのでハンガリーのポスドクの助けを借りてarXivに論文を投稿した話」<span class="text-neutral-500">note (2025)</span></a></li>
 <li><a class="text-inherit no-underline transition-opacity duration-150 ease-out hover:opacity-70" href="https://www.itmedia.co.jp/news/articles/2512/22/news034.html">「日本の会社員が発見、数学界を賑わせた『新図形』とは？　論文も5日間で執筆、arXivにも掲載」<span class="text-neutral-500">ITmedia (2025)</span></a></li>
 </ul>
-<h2 id="コミュニティ">コミュニティ</h2>
+<h2 id="community">コミュニティ</h2>
 <p>MKはFacebookグループ<a href="https://www.facebook.com/groups/tiled/" rel="noopener noreferrer" target="_blank" data-goatcounter-click="ext-www-facebook-com-groups-tiled" data-goatcounter-title="www.facebook.com/groups/tiled"><strong>DefinitelyTiled</strong></a>を運営しています。</p>
 <p>グループの紹介文（日本語訳）</p>
 <blockquote>
@@ -102,7 +113,7 @@ MK.TILING.JP
 <p>タイリングや空間を埋める構造が、どのような仕組みで、なぜ成り立つのか。その理解につながる解説や情報を歓迎します。</p>
 <p>私たちは、どんなものにもパターンを見つけがちです。そこでこのグループでは、数学的に意味のある、明確に定義された構造に焦点を当てます。</p>
 </blockquote>
-<h2 id="お問い合わせ支援">お問い合わせ・支援</h2>
+<h2 id="contact-and-support">お問い合わせ・支援</h2>
 <p>研究、講演、展示、取材などのご相談は、<a href="/contact/">お問い合わせページ</a>からご連絡ください。</p>
 <p>活動を気に入っていただけたら、<a href="https://ko-fi.com/mk_tiling" rel="noopener noreferrer" target="_blank" data-goatcounter-click="ext-ko-fi-com-mk-tiling" data-goatcounter-title="ko-fi.com/mk_tiling">Ko-fi</a>でご支援いただけますと幸いです。</p> </main> <footer class="px-4 pb-4 text-center text-xs text-neutral-500">
 &copy; 2026 MK

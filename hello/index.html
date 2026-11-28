@@ -16,18 +16,29 @@
 
     document.addEventListener("click", setGoatcounterReferrer, true);
     document.addEventListener("auxclick", setGoatcounterReferrer, true);
+
+    const preserveLanguageHash = (event) => {
+      if (!(event.target instanceof Element)) return;
+      const link = event.target.closest("a[data-language-switch]");
+      if (!(link instanceof HTMLAnchorElement)) return;
+      link.hash = window.location.hash;
+    };
+
+    document.addEventListener("click", preserveLanguageHash, true);
+    document.addEventListener("auxclick", preserveLanguageHash, true);
+    document.addEventListener("contextmenu", preserveLanguageHash, true);
   })();
-</script><link rel="stylesheet" href="/_astro/index.CyUkU3tV.css"></head> <body class="min-h-dvh flex flex-col font-sans "> <main class="text-neutral-900 flex-1">  <section class="w-full overflow-hidden"> <div class="relative h-[clamp(120px,41.425vw,381px)] w-full"> <img class="absolute left-1/2 top-1/2 aspect-[2.414/1] min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover" src="/assets/hello/banner.svg" alt=""> </div> </section> <section class="mx-auto flex w-full max-w-3xl flex-col gap-10 px-4 py-10 md:gap-14 md:py-14"> <div class="flex flex-col items-center gap-6 text-center"> <div class="font-overpass"> <h1 class="mb-2 text-4xl font-semibold tracking-tight md:text-5xl">
+</script><link rel="stylesheet" href="/_astro/index.DtENmNk7.css"></head> <body class="min-h-dvh flex flex-col font-sans "> <main class="text-neutral-900 flex-1">  <section class="w-full overflow-hidden"> <div class="relative h-[clamp(120px,41.425vw,381px)] w-full"> <img class="absolute left-1/2 top-1/2 aspect-[2.414/1] min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover" src="/assets/hello/banner.svg" alt=""> </div> </section> <section class="mx-auto flex w-full max-w-3xl flex-col gap-10 px-4 py-10 md:gap-14 md:py-14"> <div class="flex flex-col items-center gap-6 text-center"> <div class="font-overpass"> <h1 class="mb-2 text-4xl font-semibold tracking-tight md:text-5xl">
 Miki Imu<span class="inline-block mr-[0.03em]">r</span>a
 </h1> <p class="text-base md:text-lg">
 Mathematician / <span class="inline-block -mr-[0.05em]">A</span>rtist
 </p> </div> <div class="flex w-full max-w-xl flex-wrap items-center justify-center gap-4"> <a class="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center overflow-hidden rounded-xl
             bg-white
             transition-[background-color] duration-200 ease-out
-            hover:bg-neutral-100" href="https://www.instagram.com/mk.tiling.jp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-goatcounter-click="ext-instagram" data-goatcounter-title="Instagram"> <img class="h-6 w-6 object-contain" src="/assets/social/instagram.svg" alt=""> </a> <a class="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center overflow-hidden rounded-xl
+            hover:bg-neutral-100" href="https://www.instagram.com/mk.tiling.jp/" target="_blank" rel="noopener noreferrer" data-goatcounter-click="ext-instagram" data-goatcounter-title="Instagram"> <img class="h-6 w-6 object-contain" src="/assets/social/instagram.svg" alt="Instagram"> </a> <a class="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center overflow-hidden rounded-xl
             bg-white
             transition-[background-color] duration-200 ease-out
-            hover:bg-neutral-100" href="https://note.com/tairu_mk" target="_blank" rel="noopener noreferrer" aria-label="note" data-goatcounter-click="ext-note" data-goatcounter-title="note"> <img class="h-12 w-12 object-contain" src="/assets/social/note.svg" alt=""> </a> <a class="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center overflow-hidden rounded-xl
+            hover:bg-neutral-100" href="https://note.com/tairu_mk" target="_blank" rel="noopener noreferrer" data-goatcounter-click="ext-note" data-goatcounter-title="note"> <img class="h-12 w-12 object-contain" src="/assets/social/note.svg" alt="note"> </a> <a class="flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center overflow-hidden rounded-xl
             bg-white
             transition-[background-color] duration-200 ease-out
             hover:bg-neutral-100" href="mailto:mk@tiling.jp" aria-label="Email" data-goatcounter-click="open-email" data-goatcounter-title="Email"> <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path> <rect x="2" y="4" width="20" height="16" rx="2"></rect> </svg> </a> </div> </div> <section> <h2 class="mb-3 text-lg font-semibold md:text-xl">Statement</h2> <p class="max-w-2xl text-sm leading-7 md:text-base">
@@ -50,7 +61,7 @@ Modulo Krinkle Tiling
 「日本の会社員が発見、数学界を賑わせた『新図形』とは？　論文も5日間で執筆、arXivにも掲載」<span class="text-neutral-500">ITmedia (2025/12/22)</span> </a> </li> </ul> </section> <section> <a class="relative block
           transition-[background-color,opacity,transform] duration-200 ease-out
           hover:bg-neutral-50 hover:opacity-80 hover:scale-[1.01] active:scale-[0.99]
-          focus:outline-none focus-visible:outline-none sm:focus-visible:outline-2 sm:focus-visible:outline-blue-300" href="/playground/"> <img class="h-auto w-full" src="/assets/playground.png" alt="Playground preview"> <span class="absolute bottom-1 right-1 flex min-h-6 items-center justify-center rounded-full bg-white/80 px-3 text-sm md:bottom-2 md:right-2">
+          focus:outline-none focus-visible:outline-none sm:focus-visible:outline-2 sm:focus-visible:outline-blue-300" href="/playground/"> <img class="h-auto w-full" src="/assets/playground.png" alt="Playground"> <span class="absolute bottom-1 right-1 flex min-h-6 items-center justify-center rounded-full bg-white/80 px-3 text-sm md:bottom-2 md:right-2">
 Discover how patterns emerge
 </span> </a> </section> <div class="flex justify-center"> <a class="min-h-10 rounded-full border-2 border-neutral-900 bg-white px-4
           flex items-center justify-center text-base
